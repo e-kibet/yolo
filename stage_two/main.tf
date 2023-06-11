@@ -11,6 +11,6 @@ resource "null_resource" "ansible_provisioning" {
   provisioner "local-exec" {
     command = "ansible-playbook -i inventory.ini playbook.yml"
     
-    working_dir = "ansible"
+    working_dir = var.ansible_location
   }
 }
